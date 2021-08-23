@@ -14,28 +14,17 @@ const PipelineStage = styled.div`
   background-color: white;
   position: relative;
   margin-right: 40px;
-
-  &::after {
-    content: " ";
-    display: block;
-    position: absolute;
-    height: 3px;
-    background: #dbdbdb;
-    width: 40px;
-    left: 100%;
-    top: calc(50% - 2px);
-  }
 `;
 
 export default function App() {
   return (
     <div style={{ display: "flex" }}>
-      <PipelineStage>
+      <PipelineStage className="after">
         <h5>Merge to Master</h5>
         {/* <CircularProgress size="20px" /> */}
         <CheckCircleOutlineIcon style={{ color: "green" }} />
       </PipelineStage>
-      <PipelineStage>
+      <PipelineStage className="before">
         <h5>Recreate Develop</h5>
         <CircularProgress size="20px" />
         {/* <CheckCircleOutlineIcon style={{ color: "green" }} /> */}

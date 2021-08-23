@@ -6,3 +6,25 @@
 body {
   background-color: lightgray;
 }
+
+.after::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 3px;
+  background: #ffffff;
+  width: 40px;
+  left: 100%;
+  top: calc(50% - 2px);
+}
+
+.before::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 3px;
+  background: #ffffff;
+  width: 40px;
+  right: 100%;
+  top: calc(50% - 2px);
+}
